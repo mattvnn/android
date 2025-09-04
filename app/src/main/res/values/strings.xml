@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">MyApp</string>
     <string name="hello">hi</string>
+    <string name="_0">0</string>
+    <string name="entre_com_o_intervalo">Entre com o intervalo</string>
+    <string name="_100">100</string>
+    <string name="sortear">Sortear</string>
+    <string name="entre">Entre</string>
 </resources>

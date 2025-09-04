@@ -1,46 +1,55 @@
 package rbenica.app;
 
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class IMCResultado extends AppCompatActivity {
-    TextView tvPeso, tvAltura, tvImc;
-    ImageView imageView;
+
+    TextView tvNome, tvPeso, tvAltura, tvIMC, tvClassificacao;
+    ImageView imgIMC;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_imcresultado);
-        tvPeso=findViewById(R.layout.tvPeso);
-        tvAltura=findViewById(R.layouttvAltura);
-        tvImc=findViewById(R.layout.tvImc);
 
-        imageView = findViewById(R.id.imgPerfil);
+        tvPeso = findViewById(R.id.tvPeso);
+        tvAltura = findViewById(R.id.tvAltura);
+        tvIMC = findViewById(R.id.tvIMC);
+        tvClassificacao = findViewById(R.id.tvClassificacao);
+        imgIMC = findViewById(R.id.imgIMC);
 
         Bundle b = getIntent().getExtras();
         float peso = b.getFloat("peso");
         float altura = b.getFloat("altura");
+        float imc = peso / (altura * altura);
 
-        float imc = (peso)/(altura+altura);
-        tvPeso.setText(Float.toString(peso));
-        tvAltura.setText(Float.toString(altura));
-        tvImc.setText(Float.toString(imc));
+        tvPeso.setText("Peso: " + peso + " Kg");
+        tvAltura.setText("Altura: " + altura + " m");
+        tvIMC.setText("IMC: " + String.format("%.2f", imc));
 
-        if(imc<18.5){
-            imageView.setImageResource(R.drawable.abaixopeso);
+        if(imc < 18.5){
+            tvClassificacao.setText("Abaixo do peso");
+            imgIMC.setImageResource(R.drawable.abaixopeso);
+        } else if(imc < 25){
+            tvClassificacao.setText("Peso normal");
+            imgIMC.setImageResource(R.drawable.normal);
+        } else if(imc < 30){
+            tvClassificacao.setText("Sobrepeso");
+            imgIMC.setImageResource(R.drawable.sobrepeso);
+        } else if(imc < 35){
+            tvClassificacao.setText("Obesidade grau 1");
+            imgIMC.setImageResource(R.drawable.obesidade1);
+        } else if(imc < 40){
+            tvClassificacao.setText("Obesidade grau 2");
+            imgIMC.setImageResource(R.drawable.obesidade2);
+        } else {
+            tvClassificacao.setText("Obesidade grau 3");
+            imgIMC.setImageResource(R.drawable.obesidade3);
         }
-        if(imc>18.5 && imc<25){
-            imageView.setImageResource(R.drawable.normal);
-        }
 
-
-        };
     }
+}

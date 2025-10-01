@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tvPeso"
+        android:layout_width="136dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="16dp"
+        android:text="Peso: 80 Kg"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAltura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="40dp"
+        android:text="Altura: 1,80 m"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@id/tvPeso"
+        app:layout_constraintTop_toBottomOf="@id/tvPeso" />
+
+    <TextView
+        android:id="@+id/tvIMC"
+        android:layout_width="141dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        android:text="IMC: 25,32"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/tvAltura"
+        app:layout_constraintTop_toBottomOf="@id/tvAltura" />
+
+    <ImageView
+        android:id="@+id/imgIMC"
+        android:layout_width="278dp"
+        android:layout_height="430dp"
+        android:layout_marginTop="9dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvIMC" />
+
+    <TextView
+        android:id="@+id/tvClassificacao"
+        android:layout_width="6dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:text=""
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgIMC" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

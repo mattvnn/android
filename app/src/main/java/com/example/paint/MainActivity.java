@@ -1,4 +1,4 @@
-package com.example.paint;  // MUDAR PARA ISSO
+package com.example.paint;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         btnSquare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                simplePaint.setMode(1);  // 1 = Retângulo
+                simplePaint.setMode(1);
                 highlightButton(btnSquare);
                 Toast.makeText(MainActivity.this, "Retângulo", Toast.LENGTH_SHORT).show();
             }
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         btnCircle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                simplePaint.setMode(2);  // 2 = Círculo
+                simplePaint.setMode(2);
                 highlightButton(btnCircle);
                 Toast.makeText(MainActivity.this, "Círculo", Toast.LENGTH_SHORT).show();
             }

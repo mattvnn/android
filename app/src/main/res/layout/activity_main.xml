@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Geolocalização - Location Manager"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/txtProvider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Provedor: -"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/txtLatitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Latitude: -"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/txtLongitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Longitude: -"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/txtAccuracy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Precisão: -"
+            android:textSize="16sp"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:id="@+id/txtAltitude"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Altitude: -"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/txtBearing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Direção: -"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/txtSpeed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Velocidade: -"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+</ScrollView>

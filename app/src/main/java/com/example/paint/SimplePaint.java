@@ -1,4 +1,4 @@
-package com.example.paint;  // MUDAR PARA ISSO
+package com.example.paint;
 
 import android.content.Context;
 import android.graphics.Canvas;
@@ -18,7 +18,7 @@ public class SimplePaint extends View {
     private Stack<Paint> undopaints = new Stack<>();
     private Paint paint = new Paint();
     private Path path = new Path();
-    private int mode = 0;  // 0=pincel, 1=quadrado, 2=circulo
+    private int mode = 0;
     private float startX, startY;
 
     public SimplePaint(Context context, AttributeSet attrs) {
